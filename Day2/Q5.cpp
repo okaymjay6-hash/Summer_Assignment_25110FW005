@@ -11,6 +11,6 @@ int main(){
         sum=sum + n%10;
         n=n/10;
     }
-    cout << sum;
+    cout << "sum of the digits =" << sum;
     return 0;
 }
