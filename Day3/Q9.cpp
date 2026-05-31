@@ -8,7 +8,7 @@ int main(){
     cin >> n;
     for(int i=2; i*i<=n; i++){
         if(n%i==0){
-            cout<<"It is not a prime number";
+            cout<<"Not a prime number";
             return 0;
         }
     }
