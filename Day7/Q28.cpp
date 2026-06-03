@@ -8,7 +8,9 @@ int reverse(int n, int rev){
     }
     int dig=n%10;
     rev=rev*10+dig;
-    reverse(n/10,rev);
+    return reverse(n/10,rev); //adding return here doesn't change the value, it just makes 
+                             //sure the value travels back up to main instead of 
+                            //getting lost at each level without return
 }
 
 int main(){
