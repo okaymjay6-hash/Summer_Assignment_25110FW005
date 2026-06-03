@@ -9,7 +9,7 @@ int main(){
     int digit=0;
     if(n==0){
         cout << 1;
-        return 0;
+        return 0; //added zero case
     }
     while(n>0){
         n=n/10;
