@@ -16,9 +16,10 @@ int main(){
     for(int i=0; i<n; i++){
         if(arr[i]%2==0){
             evenum++;
-            continue;
         }
-        oddnum++;
+        else{
+            oddnum++;
+        }
     }
     cout << "No. of odd elements: " << oddnum;
     cout << "No. of even elements: " << evenum; 
