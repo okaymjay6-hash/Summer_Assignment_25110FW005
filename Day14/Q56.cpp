@@ -7,19 +7,21 @@ void nested_loop(int arr[], int n){
 
     int count=0;
     for(int i=0; i<n; i++){
-        if(arr[i]==-1){
-            continue;
+      for(int k=0; k<i; k++){
+        if(arr[i]==arr[k]){
+            count--;
+            break;
         }
+      }
       for(int j=i+1; j<n; j++){
         if(arr[j]==arr[i]){
             count++;
+            break;
         }
-        arr[j]=-1;
       }
       if(count>0){
         cout << arr[i] << " ";
       }
-      arr[i]=-1;
       count = 0;
     }
 }
