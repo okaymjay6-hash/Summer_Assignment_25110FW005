@@ -2,15 +2,9 @@
 #include <iostream>
 using namespace std;
 
-int main(){
-    int n,z;
-    cout << "Enter array size: ";
-    cin >> n;
-    int arr[n];
-    cout << "Enter elements: ";
-    for(int i=0; i<n; i++){
-        cin >> arr[i];
-    }
+//only valid for positive integers
+void nested_loop(int arr[], int n){
+
     int count=0;
     for(int i=0; i<n; i++){
         if(arr[i]==-1){
@@ -28,6 +22,30 @@ int main(){
       arr[i]=-1;
       count = 0;
     }
+}
+//only valid if elements are of range 0 to (n-1)
+void frequency(int arr[], int n){
+    int freq[n];
+    for(int i=0; i<n; i++){
+        freq[arr[i]]++;
+    }
+    for(int k=0; k<n; k++){
+        if(freq[k]>1){
+            cout << k << " ";
+        }
+    }
+}
+
+int main(){
+    int n,z;
+    cout << "Enter array size: ";
+    cin >> n;
+    int arr[n];
+    cout << "Enter elements: ";
+        for(int i=0; i<n; i++){
+        cin >> arr[i];
+    }
+    nested_loop(arr,n);
     return 0;
 }
 //right now the time complexity is O(n^2) which can 
