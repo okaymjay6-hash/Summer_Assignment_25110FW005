@@ -11,12 +11,12 @@ void reverse(int arr[],int n){
 //without nested loop
 void rotateleft2(int arr[], int n, int k){
     reverse(arr,k);
-    // int i=k;
-    // for(int j=0;j<(n-k)/2; j++){
-    //     swap(arr[i],arr[n-1-j]);
-    //     i++;
-    // }
-    reverse(arr+k,n-k);
+    int i=k;
+    for(int j=0;j<(n-k)/2; j++){
+        swap(arr[i],arr[n-1-j]);
+        i++;
+    }
+   // reverse(arr+k,n-k); we can usw this as well;
     reverse(arr,n);
     for(int i=0; i<n; i++){
         cout << arr[i] << " ";
