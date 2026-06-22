@@ -1,4 +1,5 @@
 //first non-repeating character
+//for each index
 #include <iostream>
 #include <queue>
 #include <string>
@@ -23,7 +24,7 @@ void non_repeating(string str){
 }
 
 int main(){
-    string str="aabccxb";
+    string str="aabccxb"; //the output will be calculated for 1.a 2.aa 3.aab like that
     non_repeating(str);
     return 0;
 }

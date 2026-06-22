@@ -1,4 +1,4 @@
-// first repeating character
+//first repeating character
 #include <iostream>
 #include <queue>
 #include <string>
@@ -6,20 +6,24 @@ using namespace std;
 
 void repeating(string str){
     int freq[26]={0};
+    queue<char> Q;
     for(int i=0; i<str.size(); i++){
         char ch=str[i];
-        freq[ch -'a']++;  
+        freq[ch-'a']++;
+        Q.push(ch);
     }
-    for(int i=0; i<26;i++){
-        if(freq[i]>1){
-            cout << char('a'-i);
-            break;
-        }
+    while(!Q.empty() && freq[Q.front()-'a']==1){
+        Q.pop();
+    }
+    if(Q.empty()){
+        cout << -1;
+    }else{
+        cout << Q.front();
     }
 }
 
 int main(){
-    string str="abcxcxb";
+    string str="dcdc";
     repeating(str);
     return 0;
 }
